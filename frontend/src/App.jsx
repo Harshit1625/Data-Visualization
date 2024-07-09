@@ -10,6 +10,8 @@ import Years from "./components/Years";
 import Country from "./components/Country";
 import Region from "./components/Region";
 import Topics from "./components/Topics";
+import MoonLoader from "react-spinners/MoonLoader";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function App() {
   const [dataVisuals, setDataVisuals] = useState([]); //primary data
@@ -18,7 +20,7 @@ function App() {
   const [key, setKey] = useState("region");
   const [pair, setPair] = useState("Northern America");
   const [incomingData, setIncomingData] = useState([]); //filtered data
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
 
   axios.defaults.baseURL = "http://localhost:4000/";
   axios.defaults.withCredentials = true;
@@ -28,7 +30,7 @@ function App() {
       const { data } = response;
       setDataVisuals(data);
       setIncomingData(data);
-      setLoad(true);
+      setLoad(false);
     });
   }, []);
 
@@ -81,23 +83,40 @@ function App() {
   return (
     <>
       {/* Header */}
-      <div className="shadow w-full p-3 fixed z-20 bg-white rounded-xl flex items-center">
-        <h1 className="text-indigo-800 font-bold text-[18px] ml-[1vw] mt-2 mr-[70vw]">
-          Dashboard
-        </h1>
-      </div>
 
-      {load && (
+      {load ? (
+        <>
+          <div className="shadow w-[100vw] p-3 z-20 bg-white rounded-xl flex items-center">
+            <h1 className="text-indigo-800 font-bold text-[18px] ml-[1vw] mt-2 mr-[70vw]">
+              Dashboard
+            </h1>
+          </div>
+
+          <div className="loader">
+            <span className="color-h1">Loading data</span>
+            <MoonLoader color={"purple"} loading={load} size={20} />
+          </div>
+        </>
+      ) : (
         <>
           {/* Main */}
-          <div className="flex relative">
+          <div className="shadow w-full p-3 fixed z-20 bg-white flex items-center">
+              <h1 className="color-h1 font-bold text-[18px] ml-[1vw] mt-2 mr-[70vw]">
+                Dashboard
+              </h1>
+              <div className="bg-slate-200 flex pl-2 pr-2 pt-1 pb-1 gap-2 rounded ml-[14.5vw]">
+              <AccountCircleIcon />
+              <h1 className="color-p">Admin</h1>
+              </div>
+          </div>
+          <div className="flex ml-5 relative">
             <div className="w-[75vw] mt-[50px] h-[90vh]">
               <div className="flex w-full">
                 <Topics topics={topicsID} />
                 <Region intensity={intensityID} />
               </div>
               <Years sector={incomingData} />
-              <div className="flex  w-full ml-4">
+              <div className="flex ml-4">
                 <Relevance relevant={incomingData} />
                 <Likelihood like={likelihoodID} />
               </div>

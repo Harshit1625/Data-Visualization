@@ -13,15 +13,21 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@gsap/react": "^2.1.0",
-    "@mui/material": "^5.15.14",
+    "@mui/icons-material": "^5.16.0",
+    "@mui/material": "^5.16.0",
     "@mui/x-charts": "^7.1.0",
+    "ag-charts-enterprise": "^10.0.0",
+    "ag-charts-react": "^10.0.0",
+    "apexcharts": "^3.50.0",
     "axios": "^1.6.8",
     "gsap": "^3.12.5",
     "install": "^0.13.0",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-google-charts": "^4.0.1",
-    "react-plotly.js": "^2.6.0"
+    "react-plotly.js": "^2.6.0",
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

@@ -17,7 +17,6 @@ const Region = ({ intensity }) => {
 
   const data = [...values];
   const options = {
-    title: "Representation of Intensity over few countries",
     curveType: "function",
     legend: { position: "bottom" },
     animation: {
@@ -28,23 +27,24 @@ const Region = ({ intensity }) => {
   };
 
   return (
-    <div className="shadow-lg m-3  rounded-2xl  bg-white">
+    <div className="m-3 border rounded-2xl">
       <div className="flex p-5 flex-col w-[175vw] lg:w-full cursor-pointerrounded-md  pb-7 h-full bg-white inset-6 rounded-2xl justify-between">
-        <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
-            "
+      <h1
+          className="font-medium color-h1 text-[20px]
+      "
         >
           Region
         </h1>
+        <p className="color-p">Representation of intensity over countries </p>
 
         {/* Graph Area */}
         <Chart
           chartType="ScatterChart"
           width="600px"
-          height="400px"
+          height="300px"
           data={data}
           loader={
-              <div className="h-[400px] w-[600px] flex items-center justify-center">
+              <div className="h-[300px] w-[600px] flex items-center justify-center">
                 <div className="flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

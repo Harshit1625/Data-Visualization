@@ -13,7 +13,7 @@ const Topics = ({ topics }) => {
   const data = [...values];
 
   const options = {
-    title: "Representation of trendy topics over years",
+
     is3D: true,
     animation: {
       duration: 1000,
@@ -21,14 +21,15 @@ const Topics = ({ topics }) => {
     },
   };
   return (
-    <div className="shadow-lg m-3 rounded-2xl  bg-white">
-      <div className="flex p-5 flex-col w-[130vw] lg:w-full cursor-pointerrounded-md  pb-7 h-full bg-white inset-6 rounded-2xl justify-between">
+    <div className="m-3 border rounded-2xl h-[390px]">
+      <div className="flex p-5 flex-col w-[130vw] lg:w-full cursor-pointer pb-7  bg-white inset-6 rounded-2xl justify-between">
         <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
+          className="font-medium color-h1 text-[20px]
       "
         >
           Topics
         </h1>
+        <p className="color-p">Representation of topics over years </p>
 
         {/* Graph Area */}
         <Chart

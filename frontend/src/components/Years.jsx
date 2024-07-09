@@ -16,7 +16,6 @@ const Years = ({ sector }) => {
   const data = [...values];
 
   const options = {
-    title: "Relevance of different sectors in different regions over years",
     hAxis: { title: "Years" },
     vAxis: { title: "Relevance" },
     bubble: { textStyle: { fontSize: 11 } },
@@ -24,25 +23,27 @@ const Years = ({ sector }) => {
   return (
     <div
       id="likeYears"
-      className="shadow-lg m-3 cursor-pointer rounded-2xl  bg-white"
+      className="m-3 border rounded-2xl"
     >
       <div className="flex lg:w-full w-[312vw] sm:w-[312vw] md:w-[113vw] p-5 flex-col cursor-pointerrounded-md  pb-7 h-full bg-white inset-6 rounded-2xl justify-between">
-        <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
-            "
+      <h1
+          className="font-medium color-h1 text-[20px]
+      "
         >
           Years
         </h1>
+        <p className="color-p">Representation of sectors in regions over countries </p>
+
 
         {/* Graph Area */}
 
         <Chart
           chartType="BubbleChart"
           width="100%"
-          height="400px"
+          height="300px"
           data={data}
           loader={
-              <div className="h-[400px] w-[100%] flex items-center justify-center">
+              <div className="h-[300px] w-[100%] flex items-center justify-center">
                 <div className="flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

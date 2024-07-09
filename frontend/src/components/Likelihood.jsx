@@ -15,8 +15,7 @@ const Likelihood = ({ like }) => {
   const data = [...values];
 
   const options = {
-    title: "Representation of likelihood over different regions",
-    is3D: true,
+    is3D: false,
     animation: {
       duration: 1000,
       easing: "out",
@@ -25,22 +24,23 @@ const Likelihood = ({ like }) => {
   };
 
   return (
-    <div id="likeLikelihood" className="shadow-lg m-3 rounded-2xl  bg-white">
+    <div id="likeLikelihood" className="m-3 border rounded-2xl">
       <div className="flex p-5 w-[130vw] lg:w-full flex-col cursor-pointerrounded-md  pb-7 h-full bg-white inset-6 rounded-2xl justify-between">
-        <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
-        "
+      <h1
+          className="font-medium color-h1 text-[20px]
+      "
         >
           Likelihood
         </h1>
+        <p className="color-p mb-3">Representation of likelihood over regions </p>
 
         {/* Graph Area */}
         <Chart
           chartType="PieChart"
           width="330px"
-          height="340px"
+          height="300px"
           loader={
-              <div className="h-[340px] w-[330px] flex items-center justify-center">
+              <div className="h-[300px] w-[330px] flex items-center justify-center">
                 <div className="flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

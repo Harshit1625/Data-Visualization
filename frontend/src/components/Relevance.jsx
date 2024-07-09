@@ -15,16 +15,15 @@ const Relevance = ({ relevant }) => {
   return (
     <>
       <div id="likeRelevance">
-        <div className="flex p-4 w-[175vw] lg:w-full flex-col cursor-pointer mt-3 rounded-2xl bg-white inset-6 shadow-lg justify-between">
-          <h1
-            className="text-indigo-800 font-bold text-[20px] border-indigo-800
-        "
-          >
-            Relevance
-          </h1>
-          <p className="m-3 ml-0 mb-5 font-semibold">
-            Representation of relevance over different countries
-          </p>
+        <div className="flex p-4 w-[175vw] lg:w-full flex-col cursor-pointer mt-3 border rounded-2xl justify-between">
+        <h1
+          className="font-medium color-h1 text-[20px]
+      "
+        >
+          Relevance
+        </h1>
+        <p className="color-p mb-3">Representation of relevance in regions over countries </p>
+
 
           {/* Graph Area */}
           <Chart

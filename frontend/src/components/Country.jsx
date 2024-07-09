@@ -16,30 +16,30 @@ const Country = ({ country }) => {
 
   const data = [...values];
   const options = {
-    title: "Representation of likelihood over different countries",
     curveType: "function",
     legend: { position: "bottom" },
   };
 
   return (
-    <div className="shadow-lg m-3 rounded-2xl  bg-white">
-      <div className="flex p-5  lg:w-full w-[312vw] sm:w-[155vw] md:w-[113vw] flex-col cursor-pointerrounded-md  pb-7 h-full bg-white inset-6 rounded-2xl justify-between">
-        <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
-            "
+    <div className="m-3 border rounded-2xl">
+      <div className="flex p-5 pb-7 lg:w-full w-[312vw] sm:w-[155vw] md:w-[113vw] flex-col cursor-pointerrounded-md h-full bg-white inset-6 rounded-2xl justify-between">
+      <h1
+          className="font-medium color-h1 text-[20px]
+      "
         >
           Country
         </h1>
+        <p className="color-p">Representation of likelihood over countries </p>
 
         {/* Graph Area */}
         <Chart
           chartType="LineChart"
           width="100%"
-          height="350px"
+          height="300px"
           data={data}
           options={options}
           loader={
-              <div className="h-[350px] w-[985px] flex items-center justify-center">
+              <div className="h-[300px] w-[985px] flex items-center justify-center">
                 <div className="flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -16,7 +16,6 @@ const Intensity = ({ year }) => {
   const data = [...values];
 
   const options = {
-    title : 'Representation of Intensity over years',
     chartArea: { width: "80%" },
     animation: {
       startup: true,
@@ -34,15 +33,16 @@ const Intensity = ({ year }) => {
   };
 
   return (
-    <div className="shadow-lg rounded-2xl m-3">
+    <div className="m-3 border rounded-2xl">
       <div className="flex p-4 lg:w-full w-[312vw] sm:w-[155vw] md:w-[113vw] flex-col cursor-pointer bg-white rounded-2xl">
-        <h1
-          className="text-indigo-800 font-bold text-[20px] border-indigo-800
-        "
+      <h1
+          className="font-medium color-h1 text-[20px]
+      "
         >
           Intensity
         </h1>
-        <p></p>
+        <p className="color-p mb-3">Representation of intensity over years </p>
+
 
         {/* Graph Area */}
         <Chart

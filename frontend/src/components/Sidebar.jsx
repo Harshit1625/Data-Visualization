@@ -18,7 +18,7 @@ const Sidebar = ({
 }) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className="mt-[55px]">
+    <div className="mt-[60px]">
       <button
         className="fixed z-10 ml-[225vw] bg-white p-2 mt-1  rounded-2xl lg:hidden"
         onClick={() => {
@@ -90,14 +90,14 @@ const Sidebar = ({
                 ></path>{" "}
               </g>
             </svg>
-            <h3>Filter</h3>
+            <h3 className="color-p mb-3">Filter</h3>
           </>
         )}
       </button>
 
       {openMenu && (
         <div className="fixed lg:flex border-2 lg:flex-col bg-white rounded-xl w-[50vw] right-4 h-[90vh]  justify-start p-4 overflow-y-auto">
-          <h1 className="font-bold text-[25px] text-indigo-800">Filter</h1>
+          <h1 className="color-p mb-3">Filter</h1>
 
           {/* Sector */}
           <div>
@@ -499,9 +499,9 @@ const Sidebar = ({
         </div>
       )}
 
-      {/* Sidebar */}
-      <div className="hidden lg:flex border-2 lg:flex-col bg-white rounded-xl w-[20vw] h-[90vh] fixed justify-start p-4 overflow-y-auto">
-        <h1 className="font-bold text-[25px] text-indigo-800">Filter</h1>
+      {/* Sidebar for lg screen*/}
+      <div className="hidden lg:flex border-2 lg:flex-col bg-white rounded-xl w-[22.5vw] h-[90vh] fixed justify-start p-4 overflow-y-auto mr-9">
+        <h1 className="color-f mb-3">Filter</h1>
 
         {/* Sector */}
         <div>
